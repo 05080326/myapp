@@ -14,18 +14,25 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+//** Todo Task 2-1 */
+//   Widget? activeScreen;
+//     @override
+//     void initState(){
+//       activeScreen = StartScreen(switchScreen);
+//     super.initState();
+// }
 
-  Widget? activeScreen;
-    @override
-    void initState(){
-      activeScreen = StartScreen(switchScreen);
-    super.initState();
-}
+var activeScreen = 'start-screen';
+
+//** Todo Task 2-1 */
 
 
   void switchScreen(){
     setState((){
-      activeScreen = const QuestionScreen();
+      //** Todo Task 2-2 */
+      // activeScreen = const QuestionScreen();
+      activeScreen = 'question-screen';
+      //** End Task 2-2 */
     });
   }
 
@@ -44,7 +51,12 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: activeScreen,
+           //** Todo Task 3-1 */
+          // child: activeScreen,
+          child: activeScreen == 'start-screen' 
+            ? StartScreen(switchScreen) 
+            : const QuestionScreen(),
+          //** End Task 3-1 */
         ),
       ),
     );
