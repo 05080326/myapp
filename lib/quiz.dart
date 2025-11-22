@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/start_screen.dart';
-//** Todo Task 2-3 */
 import 'package:myapp/question_screen.dart';
-//** End Task 2-3 */
-
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
 
@@ -14,25 +11,12 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-//** Todo Task 2-1 */
-//   Widget? activeScreen;
-//     @override
-//     void initState(){
-//       activeScreen = StartScreen(switchScreen);
-//     super.initState();
-// }
-
 var activeScreen = 'start-screen';
-
-//** Todo Task 2-1 */
-
 
   void switchScreen(){
     setState((){
-      //** Todo Task 2-2 */
-      // activeScreen = const QuestionScreen();
       activeScreen = 'question-screen';
-      //** End Task 2-2 */
+
     });
   }
 
@@ -51,12 +35,9 @@ var activeScreen = 'start-screen';
               end: Alignment.bottomRight,
             ),
           ),
-           //** Todo Task 3-1 */
-          // child: activeScreen,
           child: activeScreen == 'start-screen' 
             ? StartScreen(switchScreen) 
             : const QuestionScreen(),
-          //** End Task 3-1 */
         ),
       ),
     );
