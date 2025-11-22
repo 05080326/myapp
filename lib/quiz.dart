@@ -22,6 +22,15 @@ var activeScreen = 'start-screen';
 
   @override
   Widget build(context) {
+    //** todo Task 2-1 */
+   Widget screenWidget = StartScreen(switchScreen);
+
+    if (activeScreen == 'questions-screen') {
+      screenWidget = const QuestionScreen();
+    }  
+
+
+    //** End Task 2-1 */
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -35,9 +44,14 @@ var activeScreen = 'start-screen';
               end: Alignment.bottomRight,
             ),
           ),
-          child: activeScreen == 'start-screen' 
-            ? StartScreen(switchScreen) 
-            : const QuestionScreen(),
+          // child: activeScreen == 'start-screen' 
+          //   ? StartScreen(switchScreen) 
+          //   : const QuestionScreen(),
+
+          //** todo Task 2-2 */
+          child: screenWidget,
+           //** End Task 2-2 */
+          
         ),
       ),
     );
