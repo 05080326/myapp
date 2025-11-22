@@ -20,7 +20,7 @@ var activeScreen = 'start-screen';
     });
   }
 
-
+  @override
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
