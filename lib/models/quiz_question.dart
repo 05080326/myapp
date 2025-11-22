@@ -1,6 +1,1 @@
-class QuizQuestion {
-  const QuizQuestion(this.text, this.answers);
-
-  final String text;
-  final List<String> answers;
-}
+//** To do Task 3-2 */
