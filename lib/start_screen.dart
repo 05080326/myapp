@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
+
+  //**  todo task 4.2 */
   const StartScreen({super.key});
+
+  //**  end  task 4.2 */
+
+ //**  todo task 4.3 */
+
+ //**  end  task 4.3 */
 
   @override
   Widget build(context) {
@@ -24,7 +32,9 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+           //**  todo task 4.4 */
+              onPressed:    () {},
+            //**  end task 4.4 */
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
